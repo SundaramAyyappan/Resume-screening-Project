@@ -5,3 +5,4 @@ scikit-learn
 docx2txt
 spacy
 pdfplumber
+PyPDF2
