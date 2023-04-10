@@ -3,8 +3,4 @@ pandas==1.4.4
 numpy==1.21.5
 scikit-learn
 docx2txt
-spacy
-pdfplumber
-PyPDF2
-nltk
-en_core_web_sm
+
