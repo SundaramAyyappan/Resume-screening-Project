@@ -7,3 +7,4 @@ spacy
 pdfplumber
 PyPDF2
 nltk
+en_core_web_sm
