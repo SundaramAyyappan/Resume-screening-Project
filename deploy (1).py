@@ -35,9 +35,9 @@ from spacy.matcher import Matcher
 matcher = Matcher(nlp.vocab)
 
 
-mfile = BytesIO(requests.get('https://github.com/Kshitij-2107/Resume-Classification-using-NLP/blob/c364208e6b2408e284f3943a2e528ed59a99e8db/Resume_nlp.sav?raw=true').content)
+mfile = BytesIO(requests.get('classifier_model.pkl').content)
 model = load(mfile)
-mfile1 = BytesIO(requests.get('https://github.com/Kshitij-2107/Resume-Classification-using-NLP/blob/c364208e6b2408e284f3943a2e528ed59a99e8db/vector.pkl?raw=true').content)
+mfile1 = BytesIO(requests.get('vectorizer.pkl').content)
 model1 = load(mfile1)
 
 
@@ -50,7 +50,7 @@ def extract_skills(resume_text):
     tokens = [token.text for token in nlp_text if not token.is_stop]
             
     # reading the csv file
-    data = pd.read_csv("C:/Users/sakshi/Desktop/Project (NLP)/skills.csv") 
+    data = pd.read_csv("skills.csv") 
             
     # extract values
     skills = list(data.columns.values)
